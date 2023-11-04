@@ -13,8 +13,17 @@
             >
           </div>
           <div class="top-header__links">
-            <a href="#" class="right-top-header__link">Доставка и оплата</a
-            ><a href="#" class="right-top-header__link">Гарантия</a>
+            <a
+              data-da=".menu__item_1, 610"
+              href="#"
+              class="right-top-header__link"
+              >Доставка и оплата</a
+            ><a
+              data-da=".menu__item_2, 610"
+              href="#"
+              class="right-top-header__link"
+              >Гарантия</a
+            >
           </div>
         </div>
       </div>
@@ -26,6 +35,12 @@
       <div class="body-header__content">
         <div class="body-header__menu menu">
           <nav class="menu__body">
+            <div class="menu__top top-menu">
+              <a href="#" class="top-menu__logo"
+                ><img src="img/logo.svg" alt="logo"
+              /></a>
+            </div>
+
             <ul class="menu__list">
               <li class="menu__item">
                 <a href="#" class="menu__link button button_gray">Каталог</a>
@@ -42,6 +57,8 @@
               <li class="menu__item">
                 <a href="#" class="menu__link button button_gray">Контакты</a>
               </li>
+              <li class="menu__item menu__item_1"></li>
+              <li class="menu__item menu__item_2"></li>
             </ul>
           </nav>
         </div>
@@ -57,7 +74,7 @@
             class="right-body-header__link _icon-cart button button_gray"
           ></a>
           <a
-            data-da=".bottom-header__left, 1024,first"
+            data-da=".left-bottom-header__btn, 1024,first"
             href="#"
             class="right-body-header__btn button"
             >Запросить консультацию</a
@@ -69,8 +86,13 @@
   <div class="header__bottom bottom-header">
     <div class="bottom-header__container">
       <div class="bottom-header__content">
-        <div class="bottom-header__left"></div>
-        <button type="button" class="menu__icon icon-menu button button_gray">
+        <div class="bottom-header__left left-bottom-header">
+          <div data-da=".menu__body, 610" class="left-bottom-header__btn"></div>
+        </div>
+        <button
+          type="button"
+          class="menu__icon icon-menu button button_gray menu-btn"
+        >
           <span></span>
         </button>
       </div>

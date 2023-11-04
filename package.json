@@ -17,7 +17,7 @@
     "devbuild": "gulp build --build --nowebp",
     "tmp": "gulp -f gulpfile.tmp.js",
     "bem": "fls-bemtree-from-html",
-    "GHPdeploy": "git subtree push --prefix dist origin gh-pages"
+    "GHPdeploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "@types/isotope-layout": "^3.0.9",
