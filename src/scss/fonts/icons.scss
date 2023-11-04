@@ -1,0 +1,62 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+
+._icon-settings:before {
+  content: "\e900";
+}
+._icon-case:before {
+  content: "\e901";
+}
+._icon-delivery:before {
+  content: "\e902";
+}
+._icon-rent:before {
+  content: "\e903";
+}
+._icon-youtube:before {
+  content: "\e904";
+}
+._icon-instagram:before {
+  content: "\e905";
+}
+._icon-guarantee:before {
+  content: "\e906";
+}
+._icon-sale:before {
+  content: "\e907";
+}
+._icon-arrow-down:before {
+  content: "\e908";
+}
+._icon-filter:before {
+  content: "\e90a";
+}
+._icon-close:before {
+  content: "\e90b";
+}
+._icon-all:before {
+  content: "\e90d";
+}
+._icon-search:before {
+  content: "\e90e";
+}
+._icon-cart:before {
+  content: "\e90f";
+}
+._icon-service:before {
+  content: "\e912";
+}
