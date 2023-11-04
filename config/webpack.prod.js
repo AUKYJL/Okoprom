@@ -143,10 +143,6 @@ const config = {
           to: `../`,
           noErrorOnMissing: true,
         },
-        {
-          from: `${paths.src}/assets`,
-          to: `../assets`,
-        },
       ],
     }),
   ],

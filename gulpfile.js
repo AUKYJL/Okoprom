@@ -28,7 +28,7 @@ import { zip } from "./config/gulp-tasks/zip.js";
 import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
 import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
-import { deploy } from "./config/gulp-tasks/deployToGHPages.js";
+//import { deploy } from "./config/gulp-tasks/deployToGHPages.js";
 
 // Послідовна обробка шрифтів
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
@@ -39,8 +39,7 @@ const buildTasks = gulp.series(
   fonts,
   jsDev,
   js,
-  gulp.parallel(html, css, images, gitignore),
-  deploy
+  gulp.parallel(html, css, images, gitignore)
 );
 
 // Експорт завдань
