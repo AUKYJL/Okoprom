@@ -57,17 +57,57 @@
               <li class="menu__item">
                 <a href="#" class="menu__link button button_gray">Контакты</a>
               </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link button button_gray">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link button button_gray">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link button button_gray">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link button button_gray">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link button button_gray">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link button button_gray">Контакты</a>
+              </li>
               <li class="menu__item menu__item_1"></li>
               <li class="menu__item menu__item_2"></li>
             </ul>
           </nav>
         </div>
         <div class="body-header__right right-body-header">
-          <a
+          <form
             data-da=".bottom-header__left, 768,0"
-            href="#"
-            class="right-body-header__link _icon-search button button_gray"
-          ></a>
+            class="right-body-header__form form-right-body-header"
+            action="#"
+            onsubmit="return !(document.querySelector('.form-right-body-header__input').value.trim() === '')"
+          >
+            <input
+              autocomplete="off"
+              type="search"
+              name="form[search]"
+              data-error="Помилка"
+              placeholder="Поиск"
+              class="form-right-body-header__input input _icon-search button button_gray"
+            />
+
+            <button
+              type="submit"
+              id="header-search"
+              class="form-right-body-header__link _icon-search button button_gray"
+            ></button>
+            <button
+              type="button"
+              href="#"
+              class="form-right-body-header__close _icon-close button button_gray"
+            ></button>
+          </form>
+
           <a
             data-da=".bottom-header__left, 768,1"
             href="#"

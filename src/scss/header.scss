@@ -158,7 +158,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   // .body-header__menu
@@ -272,6 +272,8 @@
     height: 44px;
   }
 
+  &__form {
+  }
   // .right-body-header__btn
 
   &__btn {
@@ -285,8 +287,59 @@
       transform: translate(-50%, 0px);
     }
   }
+  &__input {
+    //  width: 44px;
+    //  height: 44px;
+    //  &::-webkit-search-cancel-button {
+    //    -webkit-appearance: none;
+    //    height: 1em;
+    //    width: 1em;
+    //    border-radius: 50em;
+    //    background-image: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+    //      no-repeat 50% 50%;
+    //    background-size: contain;
+    //    opacity: 0;
+    //    pointer-events: none;
+    //  }
+  }
 }
-
+.form-right-body-header {
+  display: flex;
+  &__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    outline: none;
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      pointer-events: none;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 1;
+  }
+  &__close {
+    display: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 1;
+    margin-left: 8px;
+  }
+}
 //====================================================================================================
 
 //Burger
