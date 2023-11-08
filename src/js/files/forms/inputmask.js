@@ -7,7 +7,7 @@ import { flsModules } from "../modules.js";
 // Підключення модуля
 import "inputmask/dist/inputmask.min.js";
 
-const inputMasks = document.querySelectorAll('input');
+const inputMasks = document.querySelectorAll('input[type="tel"]');
 if (inputMasks.length) {
-	flsModules.inputmask = Inputmask().mask(inputMasks);
+  flsModules.inputmask = Inputmask("+ 9 (999) 999 99").mask(inputMasks);
 }

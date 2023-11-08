@@ -311,7 +311,7 @@
     align-items: center;
     width: 0;
     padding: 0;
-    border: none;
+    border: none !important;
     position: relative;
     outline: none;
     &::-webkit-search-cancel-button {
