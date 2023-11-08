@@ -387,7 +387,7 @@
 
 .bottom-bottom-footer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   row-gap: 8px;
   justify-content: space-between;
   @include adaptiveValue("padding-top", 24, 16);
