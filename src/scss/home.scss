@@ -1,3 +1,307 @@
 //====================================================================================================
 
+.body-main {
+  border-radius: 16px;
+  background: var(--background-black, #202226);
+  @include adaptiveValue("padding", 40, 12);
+  // .body-main__slider
+
+  &__slider {
+  }
+
+  // .body-main__wrapper
+
+  &__wrapper {
+    @include adaptiveValue("margin-bottom", 40, 12);
+  }
+
+  // .body-main__slide
+
+  &__slide {
+  }
+}
+.slider-body-main {
+  // .slider-body-main__bottom
+
+  &__bottom {
+  }
+}
+.slide-body-main {
+  display: flex;
+  gap: 16px;
+  @media (max-width: em(768)) {
+    flex-direction: column;
+  }
+  // .slide-body-main__left
+
+  &__left {
+  }
+
+  // .slide-body-main__right
+
+  &__right {
+    background-color: #fff;
+    border-radius: 12px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-position: center;
+    }
+    @media (max-width: em(1024)) {
+      flex: 0 0 320px;
+    }
+    @media (max-width: em(768)) {
+      @include adaptiveValue("max-height", 380, 170, 0, 768, 320);
+      @include adaptiveValue("margin-bottom", 36, 12);
+    }
+  }
+}
+.left-slide-body-main {
+  flex: 0 0 552px; // .left-slide-body-main__title
+  @media (max-width: em(1024)) {
+    flex: 0 1 552px;
+  }
+  @media (max-width: em(768)) {
+    flex: 1 1 auto;
+    order: 1;
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("margin-bottom", 32, 24);
+  }
+
+  // .left-slide-body-main__list
+
+  &__list {
+  }
+
+  // .left-slide-body-main__price
+
+  &__price {
+    color: var(--text-white, #fff);
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 500;
+    line-height: math.div(24, 18);
+    @include adaptiveValue("padding-bottom", 32, 12);
+    border-bottom: 1px solid #36383c;
+  }
+}
+
+.list-left-slide-body-main {
+  @include adaptiveValue("margin-bottom", 88, 44);
+  // .list-left-slide-body-main__item
+
+  &__item {
+    color: #9f9f9f;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #36383c;
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+
+  // .list-left-slide-body-main__left
+
+  &__left {
+  }
+
+  // .list-left-slide-body-main__right
+
+  &__right {
+    text-align: right;
+  }
+}
+
+.bottom-slider-body-main {
+  display: flex;
+  justify-content: space-between;
+  // .bottom-slider-body-main__btn
+
+  &__btn {
+  }
+
+  // .bottom-slider-body-main__nav
+
+  &__nav {
+    @include adaptiveValue("margin-right", 40, 0);
+    display: flex;
+    gap: 8px;
+  }
+
+  // .bottom-slider-body-main__arrow
+
+  &__arrow {
+    height: 44px;
+    width: 44px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    // .bottom-slider-body-main__arrow_right
+
+    &_right {
+      &::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+    // .bottom-slider-body-main__arrow_left
+
+    &_left {
+      &::before {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.products-home {
+  @include adaptiveValue("margin-top", 120, 60);
+  // .products__container
+
+  &__container {
+  }
+
+  // .products__content
+
+  &__content {
+  }
+
+  // .products__top
+
+  &__top {
+  }
+
+  // .products__cards
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    @media (max-width: em(950)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(600)) {
+      grid-template-columns: repeat(1, minmax(288px, 400px));
+      justify-content: center;
+    }
+  }
+
+  // .products__card
+
+  &__card {
+  }
+}
+.top-products {
+  width: percent(852, 1200);
+  @include adaptiveValue("margin-bottom", 60, 32);
+  @media (max-width: em(768)) {
+    width: auto;
+  }
+  // .top-products__title
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 20, 12);
+  }
+
+  // .top-products__desc
+
+  &__desc {
+    color: var(--text-gray-light-bg, #757575);
+    @include adaptiveValue("font-size", 20, 14);
+    font-weight: 400;
+    line-height: math.div(24, 20);
+  }
+}
+
+.card-products {
+  align-items: stretch;
+
+  // .card-products__body
+
+  &__body {
+    border-radius: 16px;
+    background: var(--background-gray, #f4f5f8);
+    @include adaptiveValue("padding", 24, 12);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // .card-products__title
+
+  &__title {
+    color: var(--text-black, #161616);
+    font-feature-settings: "liga" off;
+
+    font-weight: 500;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: math.div(28, 24);
+    letter-spacing: 0.24px;
+    @include adaptiveValue("margin-bottom", 36, 12);
+  }
+
+  // .card-products__img-ibg
+
+  &__img-ibg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: rem(240);
+  }
+}
+
+//========================================================================================================================================================
+
+.advantages-home {
+  @include adaptiveValue("margin-top", 120, 60);
+  // .advantages-home__container
+
+  &__container {
+  }
+
+  // .advantages-home__content
+
+  &__content {
+  }
+
+  // .advantages-home__top
+
+  &__top {
+  }
+
+  // .advantages-home__body
+
+  &__body {
+  }
+}
+.top-advantages-home {
+  @include adaptiveValue("margin-bottom", 60, 32);
+  width: percent(852, 1200);
+  @media (max-width: em(768)) {
+    width: auto;
+  }
+  // .top-advantages-home__title
+
+  &__title {
+  }
+}
+
+//========================================================================================================================================================
+
 //====================================================================================================

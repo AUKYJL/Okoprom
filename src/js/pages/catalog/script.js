@@ -3,7 +3,24 @@ import {closeFilters} from "../../files/filters.js";
 
 const catalogFirstBlock = document.querySelector(".advantages-catalog");
 const advantagesCards = document.querySelectorAll(".advantages__cards");
+const productsCount = document.querySelector(
+  ".top-production-catalog__product-count"
+);
 
+function countProducts() {
+  const products = document.querySelectorAll(".card-right-production-catalog");
+  productsCount.querySelector("span").innerHTML = [...products].reduce(
+    (acc, el) => {
+      if (!el.hasAttribute("hidden")) acc += 1;
+      return acc;
+    },
+    0
+  );
+}
+
+if (productsCount) {
+  countProducts();
+}
 if (advantagesCards) {
   advantagesCards.forEach((e) => {
     const activeCardsCount = e.getAttribute("data-active-cards-count");
@@ -13,6 +30,7 @@ if (advantagesCards) {
     }
   });
 }
+
 function NewBtnText(filterBtn, ...els) {
   const originalText = filterBtn.getAttribute("data-original-text");
   const tagName = els[0].tagName.toLowerCase();
@@ -92,6 +110,7 @@ document.addEventListener("click", (e) => {
           .classList.toggle("_active");
       }
     }
+    countProducts();
   } else {
     const itemsChoose = document.querySelectorAll(
       ".filters-right-production-catalog-choose"
@@ -104,17 +123,18 @@ document.addEventListener("click", (e) => {
         .querySelector(".body-production-filters")
         .classList.remove("_active");
     }
+    countProducts();
   }
   if (e.target.closest(".list-left-production-catalog__item")) {
     const curEl = e.target.closest(".list-left-production-catalog__item");
     const itemsList = curEl.parentElement;
     const prodCatalog = document.querySelector(".list-left-production-catalog");
 
+    const filterBtn = document.querySelector(
+      ".body-production-catalog__filter-btn"
+    );
+    filterBtn.innerHTML = curEl.innerHTML;
     if (prodCatalog.classList.contains("_active")) {
-      const filterBtn = document.querySelector(
-        ".body-production-catalog__filter-btn"
-      );
-      filterBtn.innerHTML = curEl.innerHTML;
       execCloseFilters();
     }
 
@@ -129,8 +149,10 @@ document.addEventListener("click", (e) => {
       document
         .querySelector(".filters-right-production-catalog")
         .classList.remove("_active");
+      filterBtn.innerHTML = "Фильтры";
     }
     curEl.classList.add("_active");
+    countProducts();
   }
   if (e.target.closest(".body-production-filters__btn")) {
     const item = e.target.closest(".filters-right-production-catalog-choose");

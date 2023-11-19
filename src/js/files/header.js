@@ -3,7 +3,7 @@ function setPaddingFromTopHeader() {
   const firstBlock = document.querySelector("main").children[0];
 
   function setPaddingFromTopHeader(el, headerHeight) {
-    el.style.paddingTop = `${headerHeight}px`;
+    el.style.paddingTop = `${headerHeight + 32}px`;
   }
   function updatePaddingTop() {
     const headerHeight = header.clientHeight;

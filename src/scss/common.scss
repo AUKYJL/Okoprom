@@ -1,6 +1,7 @@
 // Заголовки, загальні БЕМ блоки та інше...
 .title {
   @include adaptiveValue("font-size", 40, 24);
+
   font-weight: 500;
   @include adaptiveValue("line-height", 48, 28);
 }
