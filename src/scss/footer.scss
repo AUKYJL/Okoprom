@@ -83,6 +83,8 @@
   // .right-form-footer__input
 
   &__input {
+    border: none;
+    border-bottom: 2px solid #fff;
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 20, 8);
     }

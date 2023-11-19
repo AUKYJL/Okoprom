@@ -3,9 +3,553 @@
   @@include('html/_head.htm',{ "title":"CatalogPage" })
   <body>
     <div class="wrapper">
-      <!-- @@include('html/_header.htm',{}) -->
-      <main class="page">@@include('html/_advantages.htm',{})</main>
-      <!-- @@include('html/_footer.htm',{}) -->
+      @@include('html/_header.htm',{})
+      <main class="catalog">
+        <section class="catalog__advantages advantages-catalog">
+          <div class="advantages-catalog__container">
+            <div class="advantages-catalog__content">
+              @@include('html/_advantages-cards.htm',{"activeCount":3})
+            </div>
+          </div>
+        </section>
+        <section class="catalog__production production-catalog">
+          <div class="production-catalog__container">
+            <div class="production-catalog__content">
+              <div class="production-catalog__top top-production-catalog">
+                <h2 class="top-production-catalog__title title">
+                  Станки для разделки кабеля
+                </h2>
+                <p class="top-production-catalog__product-count">
+                  <span>64</span> товара
+                </p>
+              </div>
+              <div class="production-catalog__body body-production-catalog">
+                <button
+                  type="button"
+                  class="body-production-catalog__filter-btn button">
+                  Фильтры
+                </button>
+                <div
+                  class="body-production-catalog__left left-production-catalog">
+                  <div class="left-production-catalog__dark-bg"></div>
+                  <ul
+                    class="left-production-catalog__list list-left-production-catalog">
+                    <div class="list-left-production-catalog__slide-down"></div>
+                    <li
+                      class="list-left-production-catalog__item _icon-all _active _filter-btn"
+                      data-filter="all">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Вся продукция
+                      </button>
+                    </li>
+                    <li
+                      class="list-left-production-catalog__item _icon-sale _filter-btn"
+                      data-filter="discount">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Скидки
+                      </button>
+                    </li>
+                    <li
+                      class="list-left-production-catalog__item _filter-btn"
+                      data-filter="machinesWire">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Станки для разделки кабеля
+                      </button>
+                    </li>
+                    <li
+                      class="list-left-production-catalog__item _filter-btn"
+                      data-filter="separators">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Сепараторы / Дробилки для кабеля
+                      </button>
+                    </li>
+
+                    <li
+                      class="list-left-production-catalog__item _filter-btn"
+                      data-filter="spare">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Запасные части
+                      </button>
+                    </li>
+                    <li
+                      class="list-left-production-catalog__item _filter-btn"
+                      data-filter="machinesHeat">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Станки для разделки теплообменников
+                      </button>
+                    </li>
+                    <li
+                      class="list-left-production-catalog__item _filter-btn"
+                      data-filter="radiators">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Разделка радиаторов
+                      </button>
+                    </li>
+                    <li class="list-left-production-catalog__item">
+                      <button
+                        type="button"
+                        href="#"
+                        class="list-left-production-catalog__link">
+                        Другое
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="body-production-catalog__right right-production-catalog"
+                  data-current-filters="">
+                  <div
+                    class="right-production-catalog__filters filters-right-production-catalog">
+                    <button
+                      type="button"
+                      class="filters-right-production-catalog__item button button_gray _filter-btn"
+                      data-filter="auto">
+                      Автоматические
+                    </button>
+                    <button
+                      type="button"
+                      class="filters-right-production-catalog__item button button_gray _filter-btn"
+                      data-filter="armor">
+                      Подходящие для брони
+                    </button>
+                    <button
+                      type="button"
+                      class="filters-right-production-catalog__item button button_gray _filter-btn"
+                      data-filter="press">
+                      С прессовым валом
+                    </button>
+                    <div
+                      class="filters-right-production-catalog__item-choose filters-right-production-catalog-choose">
+                      <div
+                        class="filters-right-production-catalog-choose__item">
+                        <button
+                          type="button"
+                          class="filters-right-production-catalog-choose__title _icon-arrow-down button button_gray"
+                          data-original-text="Цена">
+                          Цена
+                        </button>
+                        <div
+                          class="filters-right-production-catalog-choose__body body-production-filters">
+                          <h3 class="body-production-filters__title">
+                            Цена, ₽
+                          </h3>
+                          <form
+                            action="#"
+                            class="body-production-filters__form form-body-production-filters">
+                            <div
+                              class="form-body-production-filters__top top-form-body-production-filters">
+                              <div
+                                class="top-form-body-production-filters__container">
+                                <div
+                                  class="top-form-body-production-filters__prefix">
+                                  От
+                                </div>
+                                <input
+                                  data-filter-text
+                                  autocomplete="off"
+                                  type="text"
+                                  oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                                  name="form[]"
+                                  data-error="Ошибка"
+                                  placeholder="24 000"
+                                  class="top-form-body-production-filters__input input" />
+                              </div>
+                              <div
+                                class="top-form-body-production-filters__container">
+                                <div
+                                  class="top-form-body-production-filters__prefix">
+                                  До
+                                </div>
+                                <input
+                                  data-filter-text
+                                  autocomplete="off"
+                                  type="text"
+                                  oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                                  name="form[]"
+                                  data-error="Ошибка"
+                                  placeholder="1 000 000"
+                                  class="top-form-body-production-filters__input input" />
+                              </div>
+                            </div>
+                            <button
+                              type="button"
+                              class="body-production-filters__btn button">
+                              Применить
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="filters-right-production-catalog__item-choose filters-right-production-catalog-choose">
+                      <div
+                        class="filters-right-production-catalog-choose__item">
+                        <button
+                          type="button"
+                          class="filters-right-production-catalog-choose__title _icon-arrow-down button button_gray"
+                          data-original-text="Диапазон обработки">
+                          Диапазон обработки
+                        </button>
+
+                        <div
+                          class="filters-right-production-catalog-choose__body body-production-filters">
+                          <h3 class="body-production-filters__title">
+                            Диапазон обработки
+                          </h3>
+                          <form
+                            action="#"
+                            class="body-production-filters__form form-body-production-filters">
+                            <div
+                              class="form-body-production-filters__radio radio-form-body-production-filters options__item">
+                              <input
+                                id="c_1"
+                                data-error="Помилка"
+                                class="radio-form-body-production-filters__input options__input"
+                                type="radio"
+                                value="1"
+                                name="form[]" />
+                              <label
+                                for="c_1"
+                                class="radio-form-body-production-filters__label options__label"
+                                data-filter-text
+                                ><span class="radio__text options__text"
+                                  >Выше 50мм</span
+                                ></label
+                              >
+                            </div>
+                            <div
+                              class="form-body-production-filters__radio radio-form-body-production-filters options__item">
+                              <input
+                                id="c_2"
+                                data-error="Помилка"
+                                class="radio-form-body-production-filters__input options__input"
+                                type="radio"
+                                value="2"
+                                name="form[]" />
+                              <label
+                                for="c_2"
+                                class="radio-form-body-production-filters__label options__label"
+                                data-filter-text
+                                ><span class="radio__text options__text"
+                                  >До 50мм</span
+                                ></label
+                              >
+                            </div>
+                            <button
+                              type="button"
+                              class="body-production-filters__btn button">
+                              Применить
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right-production-catalog__cards">
+                    <!-- data-filter="discount armor press machinesWire separators spare machinesHeat radiators auto" -->
+                    <div
+                      class="right-production-catalog__card card-right-production-catalog"
+                      data-filter="discount armor press separators"
+                      data-price="34990"
+                      data-processing-range="1.5 25">
+                      <div class="card-right-production-catalog__body">
+                        <div
+                          class="card-right-production-catalog__img-ibg img-card-production-catalog">
+                          <img src="img/production/01.png" alt="img" />
+                          <div class="img-card-production-catalog__filters">
+                            <div
+                              class="img-card-production-catalog__filter filter filter_red">
+                              -10%
+                            </div>
+                            <div
+                              class="img-card-production-catalog__filter filter filter_blue">
+                              Броня
+                            </div>
+                            <div
+                              class="img-card-production-catalog__filter filter filter_green">
+                              Пресс
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-right-production-catalog__content">
+                          <h3 class="card-right-production-catalog__title">
+                            S2-3 Автоматический мини
+                          </h3>
+                          <div class="card-right-production-catalog__options">
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Вес
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                13 кг
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Двигатель
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                180 Вт
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Диам. обраб.
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                от 1,5 до 25мм
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="card-right-production-catalog__price price-card-production-catalog">
+                          <p class="price-card-production-catalog__new-price">
+                            30 990 ₽
+                          </p>
+                          <p class="price-card-production-catalog__old-price">
+                            34 990 ₽
+                          </p>
+                        </div>
+                        <div class="card-right-production-catalog__btn">
+                          <button type="button" class="button _fw">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="right-production-catalog__card card-right-production-catalog"
+                      data-filter="discount armor machinesWire auto"
+                      data-price="7 990"
+                      data-processing-range="1.5 25">
+                      <div class="card-right-production-catalog__body">
+                        <div
+                          class="card-right-production-catalog__img-ibg img-card-production-catalog">
+                          <img src="img/production/02.png" alt="img" />
+                          <div class="img-card-production-catalog__filters">
+                            <div
+                              class="img-card-production-catalog__filter filter filter_red">
+                              -20%
+                            </div>
+                            <div
+                              class="img-card-production-catalog__filter filter filter_blue">
+                              Броня
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-right-production-catalog__content">
+                          <h3 class="card-right-production-catalog__title">
+                            SG-006-1 Станок для разделки кабеля (Автоматический)
+                          </h3>
+                          <div class="card-right-production-catalog__options">
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Вес
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                13 кг
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Двигатель
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                180 Вт
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Диам. обраб.
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                от 1,5 до 25мм
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="card-right-production-catalog__price price-card-production-catalog">
+                          <p class="price-card-production-catalog__new-price">
+                            7 990 ₽
+                          </p>
+                          <p class="price-card-production-catalog__old-price">
+                            10 999 ₽
+                          </p>
+                        </div>
+                        <div class="card-right-production-catalog__btn">
+                          <button type="button" class="button _fw">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="right-production-catalog__card card-right-production-catalog"
+                      data-filter="press machinesWire auto"
+                      data-price="25 990"
+                      data-processing-range="1.5 25">
+                      <div class="card-right-production-catalog__body">
+                        <div
+                          class="card-right-production-catalog__img-ibg img-card-production-catalog">
+                          <img src="img/production/03.png" alt="img" />
+                          <div class="img-card-production-catalog__filters">
+                            <div
+                              class="img-card-production-catalog__filter filter filter_green">
+                              Пресс
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-right-production-catalog__content">
+                          <h3 class="card-right-production-catalog__title">
+                            SG-006-1 Станок для разделки кабеля (Автоматический)
+                          </h3>
+                          <div class="card-right-production-catalog__options">
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Вес
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                13 кг
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Двигатель
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                180 Вт
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Диам. обраб.
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                от 1,5 до 25мм
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="card-right-production-catalog__price price-card-production-catalog">
+                          <p class="price-card-production-catalog__new-price">
+                            25 990 ₽
+                          </p>
+                          <p
+                            class="price-card-production-catalog__old-price"></p>
+                        </div>
+                        <div class="card-right-production-catalog__btn">
+                          <button type="button" class="button _fw">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="right-production-catalog__card card-right-production-catalog"
+                      data-filter="press machinesWire auto"
+                      data-price="25 990"
+                      data-processing-range="1.5 25">
+                      <div class="card-right-production-catalog__body">
+                        <div
+                          class="card-right-production-catalog__img-ibg img-card-production-catalog">
+                          <img src="img/production/03.png" alt="img" />
+                          <div class="img-card-production-catalog__filters">
+                            <div
+                              class="img-card-production-catalog__filter filter filter_green">
+                              Пресс
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-right-production-catalog__content">
+                          <h3 class="card-right-production-catalog__title">
+                            SG-006-1 Станок для разделки кабеля (Автоматический)
+                          </h3>
+                          <div class="card-right-production-catalog__options">
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Вес
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                13 кг
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Двигатель
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                180 Вт
+                              </p>
+                            </div>
+                            <div
+                              class="card-right-production-catalog__option option-card-production-catalog">
+                              <p class="option-card-production-catalog__name">
+                                Диам. обраб.
+                              </p>
+                              <p class="option-card-production-catalog__value">
+                                от 1,5 до 25мм
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="card-right-production-catalog__price price-card-production-catalog">
+                          <p class="price-card-production-catalog__new-price">
+                            25 990 ₽
+                          </p>
+                          <p
+                            class="price-card-production-catalog__old-price"></p>
+                        </div>
+                        <div class="card-right-production-catalog__btn">
+                          <button type="button" class="button _fw">
+                            Купить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

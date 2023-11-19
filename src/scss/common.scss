@@ -1,1 +1,32 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.title {
+  @include adaptiveValue("font-size", 40, 24);
+  font-weight: 500;
+  @include adaptiveValue("line-height", 48, 28);
+}
+.filter {
+  padding: 4px 8px;
+  color: var(--text-white, #fff);
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: math.div(16, 14);
+  border-radius: 8px;
+
+  // .filter_blue
+
+  &_blue {
+    background: var(--tags-blue, #2949b5);
+  }
+
+  // .filter_green
+
+  &_green {
+    background-color: #308d77;
+  }
+
+  // .filter_red
+
+  &_red {
+    background-color: #d21924;
+  }
+}
