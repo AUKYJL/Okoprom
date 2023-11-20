@@ -67,6 +67,12 @@
   }
 }
 .card-why-us {
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translate(0, -10px);
+    }
+  }
   // .card-why-us__body
 
   &__body {

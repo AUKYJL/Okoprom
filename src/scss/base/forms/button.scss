@@ -37,4 +37,15 @@
       }
     }
   }
+  &_border {
+    border-radius: 8px;
+    border: 1px solid var(--text-black, #161616);
+    background-color: transparent;
+    color: var(--text-black, #161616);
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }

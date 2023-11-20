@@ -220,6 +220,13 @@
   }
 }
 .card-right-production-catalog {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translate(0px, -10px);
+    }
+  }
   // .card-right-production-catalog__body
 
   &__body {
