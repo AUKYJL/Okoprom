@@ -1,0 +1,197 @@
+.about-us-company {
+  // .about-us-company__container
+
+  &__container {
+  }
+
+  // .about-us-company__content
+
+  &__content {
+    @include adaptiveValue("padding-top", 60, 40);
+    @include adaptiveValue("padding-bottom", 120, 60);
+    border-top: 1px solid #e9e9e9;
+    @media (max-width: em(600)) {
+      border: none;
+    }
+  }
+
+  // .about-us-company__title
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 40, 20);
+  }
+
+  // .about-us-company__text
+
+  &__text {
+    color: var(--text-black, #161616);
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 400;
+    line-height: math.div(20, 16);
+    max-width: 592px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+}
+.advantages-company {
+  // .advantages-company__container
+
+  &__container {
+  }
+
+  // .advantages-company__content
+
+  &__content {
+    @include adaptiveValue("padding-top", 40, 24);
+    border-top: 1px solid #e9e9e9;
+  }
+
+  // .advantages-company__cards
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+    @include adaptiveValue("margin-left", -8, -20, 0, 1200, 1024);
+    @include adaptiveValue("margin-right", -8, -20, 0, 1200, 1024);
+  }
+
+  // .advantages-company__card
+
+  &__card {
+  }
+}
+.card-advantages-company {
+  @include adaptiveValue("padding-left", 8, 20, 0, 1200, 1024);
+  @include adaptiveValue("padding-right", 8, 20, 0, 1200, 1024);
+  flex: 0 1 33.333%;
+  @media (max-width: em(768)) {
+    flex: 0 1 50%;
+  }
+  @media (max-width: em(500)) {
+    flex: 1 1 auto;
+  }
+  // .card-advantages-company__subtitle
+
+  &__subtitle {
+    color: var(--text-gray-light-bg, #757575);
+    @include adaptiveValue("font-size", 16, 14);
+
+    font-weight: 400;
+    line-height: math.div(20, 16);
+    @include adaptiveValue("margin-bottom", 20, 12);
+  }
+
+  // .card-advantages-company__title
+
+  &__title {
+    color: var(--text-black, #161616);
+
+    @include adaptiveValue("font-size", 40, 24);
+    font-weight: 500;
+    line-height: math.div(48, 40);
+    @include adaptiveValue("margin-bottom", 12, 4);
+  }
+
+  // .card-advantages-company__desc
+
+  &__desc {
+    color: var(--text-black, #161616);
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 400;
+    line-height: math.div(20, 16);
+  }
+}
+.grow-company {
+  // .grow-company__container
+
+  &__container {
+  }
+
+  // .grow-company__content
+
+  &__content {
+  }
+
+  // .grow-company__title
+
+  &__title {
+    max-width: 795px;
+    @include adaptiveValue("margin-top", 120, 60);
+    @include adaptiveValue("margin-bottom", 60, 32);
+  }
+
+  // .grow-company__body
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 117, 16);
+    @media (max-width: em(768)) {
+      flex-direction: column;
+    }
+  }
+
+  // .grow-company__img-ibg
+
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 16px;
+    flex: 0 1 50%;
+    @media (max-width: em(768)) {
+      display: none;
+    }
+  }
+
+  // .grow-company__right
+
+  &__right {
+    flex: 0 1 50%;
+    @include adaptiveValue("margin-top", 40, 0, 1200, 768);
+    @include adaptiveValue("margin-bottom", 40, 0, 1200, 768);
+  }
+}
+.right-grow-company {
+  // .right-grow-company__list
+
+  &__list {
+  }
+}
+.list-right-grow-company {
+  // .list-right-grow-company__item
+
+  &__item {
+  }
+}
+.item-list-right-grow-company {
+  @include adaptiveValue("margin-bottom", 60, 32);
+  // .item-list-right-grow-company__title
+
+  &__title {
+    color: var(--text-black, #161616);
+    font-feature-settings: "liga" off;
+
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 500;
+    line-height: math.div(28, 24);
+    letter-spacing: 0.24px;
+    @include adaptiveValue("margin-bottom", 24, 12);
+  }
+
+  // .item-list-right-grow-company__desc
+
+  &__desc {
+    color: var(--text-black, #161616);
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 400;
+    line-height: math.div(20, 16);
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+}

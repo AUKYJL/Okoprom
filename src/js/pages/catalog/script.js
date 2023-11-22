@@ -7,17 +7,6 @@ const productsCount = document.querySelector(
   ".top-production-catalog__product-count"
 );
 
-function countProducts() {
-  const products = document.querySelectorAll(".card-right-production-catalog");
-  productsCount.querySelector("span").innerHTML = [...products].reduce(
-    (acc, el) => {
-      if (!el.hasAttribute("hidden")) acc += 1;
-      return acc;
-    },
-    0
-  );
-}
-
 if (productsCount) {
   countProducts();
 }
@@ -30,7 +19,16 @@ if (advantagesCards) {
     }
   });
 }
-
+function countProducts() {
+  const products = document.querySelectorAll(".card-right-production-catalog");
+  productsCount.querySelector("span").innerHTML = [...products].reduce(
+    (acc, el) => {
+      if (!el.hasAttribute("hidden")) acc += 1;
+      return acc;
+    },
+    0
+  );
+}
 function NewBtnText(filterBtn, ...els) {
   const originalText = filterBtn.getAttribute("data-original-text");
   const tagName = els[0].tagName.toLowerCase();
