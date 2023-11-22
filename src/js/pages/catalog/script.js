@@ -109,7 +109,11 @@ document.addEventListener("click", (e) => {
       }
     }
     countProducts();
-  } else {
+  }
+  if (
+    productsCount &&
+    !e.target.closest(".filters-right-production-catalog-choose")
+  ) {
     const itemsChoose = document.querySelectorAll(
       ".filters-right-production-catalog-choose"
     );

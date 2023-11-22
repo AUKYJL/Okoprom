@@ -73,6 +73,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
     "gsap": "^3.12.2",
     "gulp-cheerio": "^1.0.0",
     "isotope-layout": "^3.0.6",
