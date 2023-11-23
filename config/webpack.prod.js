@@ -26,9 +26,10 @@ if (!pugPages.length) {
         indent_size: 3,
       },
       replace: [
-        { regex: "../img", to: "img" },
-        { regex: "@img", to: "img" },
-        { regex: "NEW_PROJECT_NAME", to: rootFolder },
+        {regex: "../img", to: "img"},
+        {regex: "@img", to: "img"},
+        {regex: "@src", to: rootFolder},
+        {regex: "NEW_PROJECT_NAME", to: rootFolder},
       ],
     }),
   ];
@@ -151,6 +152,7 @@ const config = {
       "@scss": `${paths.src}/scss`,
       "@js": `${paths.src}/js`,
       "@img": `${paths.src}/img`,
+      "@src": `${rootFolder}`,
     },
   },
 };
