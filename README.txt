@@ -1,1 +1,1 @@
-GitHub Pages: https://aukyjl.github.io/Okoprom/home.html
+GitHub Pages: https://aukyjl.github.io/Okoprom
